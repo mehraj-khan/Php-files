@@ -1,0 +1,58 @@
+<form action="file.php" method="post"> 
+        <input type="text" name="name" placeholder="name"><br>
+        <?php
+        if(isset($_SESSION['name'])){
+            ?>
+         <span style="color: red;"><?php echo $_SESSION['name']; ?></span>
+         <?php
+        }
+
+         ?>
+         <br> <br>
+        <input type="number" name="num" placeholder="enter number"><br><br>
+        <?php 
+        if(isset($_SESSION['num'])){
+            ?>
+            <span style="color: red;"><?php echo $_SESSION['num']; ?></span>
+            <?php
+        }
+        ?>
+        <br>
+        <input type="text" placeholder="bike-brand / model" name="model"><br>
+        <?php 
+        if(isset($_SESSION['model'])){
+            ?>
+            <span style="color: red;"><?php echo $_SESSION['model'] ?></span>
+            <?php 
+        }
+        ?>
+        <br>
+        <input type="text" placeholder="issue/service requird" name="service"><br>
+        <?php
+        if(isset($_SESSION['service'])){
+            ?>
+            <span style="color: red;"><?php echo $_SESSION['service']; ?></span>
+            <?php
+        }
+         ?>
+        <input type="text" placeholder="address" name="address"><br>
+        <?php
+        if(isset($_SESSION['address'])){
+            ?>
+            <span style="color: red;"><?php echo $_SESSION['address'] ?></span>
+            <?php 
+        }
+         ?>
+        <select name="selcet">
+            <option >pakistan</option>
+            <option >india</option>
+            <?php
+            if(isset($_SESSION['select'])){
+                ?>
+                <span style="color: red;"><?php echo $_SESSION['selcet']; ?></span>
+                <?php 
+            }
+             ?>
+        </select><br>
+        <input type="submit" name="submit" value="submit">
+    </form>
